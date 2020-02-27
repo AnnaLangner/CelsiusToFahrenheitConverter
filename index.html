@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-      #loading, #results {
+      #loading, #result {
         display: none;
       }
     </style>
@@ -21,28 +21,29 @@
         <div class="col-md-6 mx-auto">
           <div class="card card-body text-center mt-5">
             <h1 class="heading display-5 pb-3">Converter</h1>
-            <form id="converter">
-              <div class="form-group">
+            <div id="converter">
+              <div class="input-group mb-3">
                 <div class="input-group">
                   <span class="input-group-text">°C/°F</span>
                   <input type="number" class="form-control" id="degree" placeholder="Degree">
                 </div>
               </div>
-              <div class="form-group">                
+              <div class="input-group mb-3">                
                 <input type="submit" value="Celsius to Fahrenheit" id="celsius" class="btn btn-dark btn-block">                  
               </div>
-              <div class="form-group">
+              <div class="form-group mb-3">
                 <input type="submit" value="Fahrenheit to Celsius" id="fahrenheit" class="btn btn-dark btn-block">
               </div>
-            </form>
+            </div>
             <div id="loading">
               <img src="img/loading.gif" alt="loading">
             </div> 
-            <div id="results" class="pt-4">
+            <div id="result" class="pt-4">
               <h5>Results</h5>
-              <div class="form-group">
+              <div class="input-group mb-3">
                 <div class="input-group">
-                  <span class="input-group-text">°C/°F</span>
+                  <span id="celsiusUnit" class="input-group-text">°C</span>
+                  <span id="fahrenheitUnit" class="input-group-text">°F</span>
                   <input type="number" class="form-control" id="convertedDegree" disabled>
                 </div>
               </div>
